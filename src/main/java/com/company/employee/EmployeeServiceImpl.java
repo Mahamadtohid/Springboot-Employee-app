@@ -25,7 +25,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public List<Employee> readEmployee() {
+    public List<Employee> readEmployees() {
         
         List<EmployeeEntity> employeesList = employeeRepository.findAll();
         List<Employee> employees = new ArrayList<>();
@@ -67,6 +67,22 @@ public class EmployeeServiceImpl implements EmployeeService {
         EmployeeEntity emp = employeeRepository.findById(id).get();
         employeeRepository.delete(emp);
         return true;
+    }
+
+    @Override
+    public Employee readEmployee(Long id) {
+       
+        EmployeeEntity employeeEntity = employeeRepository.findById(id).get();
+
+        Employee employee = new Employee();
+        // employee.setId(employeeEntity.getId());
+        // employee.setName(employeeEntity.getName());
+        // employee.setEmail(employeeEntity.getEmail());
+        // employee.setPhoneNumber(employeeEntity.getPhoneNumber());
+
+        BeanUtils.copyProperties(employeeEntity, employee);
+
+        return employee;
     }
 
 }
