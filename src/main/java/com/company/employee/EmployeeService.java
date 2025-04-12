@@ -7,7 +7,7 @@ public interface EmployeeService {
     Employee createEmployee(Employee employee);
     List<Employee> readEmployee();
 
-    Employee updateEmployee(Long id, Employee employee);
+    String updateEmployee(Long id, Employee employee);
     boolean  deleteEmployee(Long id);
     
 }
