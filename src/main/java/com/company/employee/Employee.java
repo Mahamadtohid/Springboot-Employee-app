@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Employee {
 
+    private long id;
     private String name;
     private String email;
     private String phoneNumber;
