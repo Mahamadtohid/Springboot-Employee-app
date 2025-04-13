@@ -11,9 +11,9 @@ function AddEmployee() {
 
         <div className='mx-10 my-2'>
         {/* <h1>AddEmployee</h1> */}
-        <input className='bg-white w-full py-2 my-4 text-slate-800' placeholder='Name'></input>
-        <input className='bg-white w-full py-2 my-4 text-slate-800' placeholder='Email'></input>
-        <input  className='bg-white w-full py-2 my-4 text-slate-800' placeholder='Phone'></input>
+        <input className='bg-white w-full py-2 my-4 text-slate-800' name="name" type="text" placeholder='Name'></input>
+        <input className='bg-white w-full py-2 my-4 text-slate-800' name="email" type="email" placeholder='Email'></input>
+        <input  className='bg-white w-full py-2 my-4 text-slate-800' name="phone" type="number" placeholder='Phone'></input>
         </div>
 
         <div className='flex px-20 space-x-4 my-4'>
