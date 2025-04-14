@@ -5,6 +5,7 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AddEmployee from './components/AddEmployee'
+import UpdateEmployee from './components/UpdateEmployee'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -18,7 +19,7 @@ function App() {
         <Route index element={<EmployeeList/>}/>
         <Route path='/' element={<EmployeeList/>} />
         <Route path='/add-employee' element={<AddEmployee/>} />
-        <Route path='/edit-employee' element={<EditEmployee/>} />
+        <Route path='/edit-employee/:id' element={<UpdateEmployee/>} />
        \
       </Routes>
 

@@ -74,7 +74,7 @@ const EmployeeList = () => {
           <tbody>
             
             {employees.map((employee)=>(
-            <tr className="hover:bg-white hover:text-black">
+            <tr key={employee.id} className="hover:bg-white hover:text-black">
               <td className='text-left px-6 py-4 whitespace-nowrap'>{employee.id}</td>
               <td className='text-left px-6 py-4 whitespace-nowrap'>{employee.name}</td>
               <td className='text-left px-6 py-4 whitespace-nowrap'>{employee.email}</td>
