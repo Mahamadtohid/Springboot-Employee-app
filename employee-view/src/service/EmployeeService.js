@@ -1,5 +1,5 @@
 import axios from "axios";
-const EMPLOYEE_S_API_BASE_URL = "http://localhost:8080/employees";
+const EMPLOYEE_S_API_BASE_URL = "http://localhost:9090/employees";
 class EmployeeService{
     saveEmployee(employee){
 
@@ -8,7 +8,7 @@ class EmployeeService{
         
     }
 
-    getEmployee(){
+    getEmployees(){
 
 
         return axios.get(EMPLOYEE_S_API_BASE_URL);
